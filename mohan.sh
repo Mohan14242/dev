@@ -1,8 +1,8 @@
 #!/bin/bash
 
-IFS=":"
-line="one two;three:four,five"
-fields=($line)
-for field in "${fields[@]}"; do
-    echo "Field: $field"
-done
+num=$1
+if [ $num -gt 10]; then 
+    echo "the number is greater than 10"
+else
+    echo "the number is less than 10
+fi
