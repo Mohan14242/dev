@@ -2,7 +2,7 @@
 
 IFS=":"
 line="mohan:chiru:btect"
-fiels=($line)
-echo "my name is ${fiels[0]}"
-echo "my friend name is ${fiels[1]}"
-echo "we both are studied at ${fiels[2]}"
+
+echo "my name is ${line[0]}"
+echo "my friend name is ${line[1]}"
+echo "we both are studied at ${line[2]}"
