@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IFS=" ,;:"
+IFS=":"
 line="one two;three:four,five"
 fields=($line)
 for field in "${fields[@]}"; do
