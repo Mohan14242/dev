@@ -1,4 +1,4 @@
 #!/bin/bash
 
-my_string="mohann"
-echo "hello world this is : $my_string"
+my_string=("mohan","chiru","vijay")
+echo "my name friends name is ${my_string[0]}
