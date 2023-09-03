@@ -4,7 +4,7 @@
 
 userid=$(id -u)
 validate(){
-    if [ $userid -ne 0]; then
+    if [ $userid -ne 0 ]; then
         echo "please make sure you are root user"
         exit 1
     else
