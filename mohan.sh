@@ -1,6 +1,8 @@
 #!/bin/bash
 
-IFS=","
-while read -r name age; do 
-    echo "name:$name ,age:$age"
-done < mohan.csv
+IFS=" ,;:"
+line="one two;three:four,five"
+fields=($line)
+for field in "${fields[@]}"; do
+    echo "Field: $field"
+done
