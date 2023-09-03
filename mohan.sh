@@ -2,7 +2,7 @@
 
 
 
-userid=$(date +%f)
+userid=$(date +%F)
 sname=$0
 logfile=/tmp/sname-$userid.log
 validate(){
