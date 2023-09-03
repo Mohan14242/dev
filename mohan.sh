@@ -2,12 +2,21 @@
 
 
 
-validate(){
-    if [ $1 -ne 0 ]; then 
-        echo "installation isgfailure"
+userid=$(id -u)
+vlidate(){
+    if [ $userid -ne 0]; then
+        echo "please make sure you are root user"
+        exit 1
     else
-        ecco "processeing the installation"
-        yum remove mysql -y
-        yum install mysql -y
+        echo "your request will install soon"
     fi
 }
+
+yum install mysql -y
+
+validate $? "my sql is installed and preparing for postfix"
+
+yum install postfix -y
+
+
+
