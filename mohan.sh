@@ -1,8 +1,8 @@
 #!/bin/bash
 
-num=$1
-if [ $num -gt 10 ]; then 
-    echo "the number is greater than 10"
+userid=$(id -u)
+if [ $userid -ne 0 ]; then 
+    echo "please run this command under root user"
 else
-    echo "the number is less than 10"
-fi
+    echo "you are the root user"
+    yum install mysql -y
