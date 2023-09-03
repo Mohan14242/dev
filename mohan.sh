@@ -1,4 +1,7 @@
 #!/bin/bash
 
-name=$(date)
-echo "this is the mohan and my date of birth is:$name"
+name1="mohan"
+name2="vijay"
+name3="chiru"
+
+echo "$name1 is the best friend of $name2 and $name3"
