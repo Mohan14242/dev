@@ -2,18 +2,17 @@
 
 name1=$1
 name2=$2
-echo "the name of the script is $0"
-echo "this is for printing the script path $(readlink -f $0)"
-if [ "$0" ="mohan.sh"]; then 
-    echo "this is my scirpt"
+echo "the number of arguments passsed is $#"
+if [ $# -lt 3]; then 
+    echo "soory give atlear 2 argumment"
 else
-    echo "this not my script"
+    echo "right"
 fi
-name=$1
-echo "this is the named argument$name"
-echo "Error in $0: Something went wrong." >&2
-scrip_name="$0"
-echo "currrent running script is $scrip_name"
-echo "the directory of the script is $(dirname "$0")"
+echo "the last argument index $(($# -1))"
+
+my_function() {
+    echo "Number of arguments in the function: $#"
+}
+my_function "$@"
 
 
