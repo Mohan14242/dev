@@ -12,11 +12,11 @@ validate(){
     fi
 }
 
-remove install mysql -y
+yum remove mysql -y
 
 validate $? "my sql is installed and preparing for postfix"
 
-remove install postfix -y
+yum remove postfix -y
 
 
 
