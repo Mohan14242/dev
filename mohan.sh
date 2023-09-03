@@ -1,9 +1,8 @@
 #!/bin/bash
 
-my_string=("mohan","chiru","vijay")
-echo "my name friends name is ${my_string[0]}"
-echo "Script name: $0"
-echo "Number of arguments: $#"
-echo "All arguments: $@"
-echo "Exit status of the last command: $?"
-echo "Username: $USER"
+echo "this is the mohan"
+name1=$1
+name2=$2
+echo "this is the first name:$name1"
+echo "this is the last name :$name2"
+
