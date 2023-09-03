@@ -8,6 +8,7 @@ if [ "$0" ="mohan.sh"]; then
     echo "this is my scirpt"
 else
     echo "this not my script"
+fi
 name=$1
 echo "this is the named argument$name"
 echo "Error in $0: Something went wrong." >&2
