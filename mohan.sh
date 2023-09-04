@@ -12,6 +12,7 @@ do
         echo "package already installed $i"
     fi
 done
+echo "$user this is my user name "
 
 
 
