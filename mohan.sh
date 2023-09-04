@@ -2,9 +2,12 @@
 
 
 
-echo "\e[31m this is the color"
-echo "\e[32m this is the color"
-echo "\e[33m this is the monan"
+r="\e[31m"
+g="\e[32m"
+n="\e[0m"
+echo "$r this is the color"
+echo "$g  this is the color"
+echo " this is the monan"
 
 
 
