@@ -1,18 +1,26 @@
 #!/bin/bash
 
 
+r="\e[31m"
+y="\e[32m"
 user=$(id -u)
 for i in $@
-do 
-    if ! yum list installed $i &>/dev/null; then
-        echo "$i is not installed installing"
-        sudo yum install mysql -y
-        echo "$i has been installed"
+do
+    echo "checking the package wheather installed or not"
+    yum list installed $i
+    if [ $? -eq 0 ]; then 
+        echo "$y package installed"
     else
-        echo "package already installed $i"
+        echo "$r package is not installed"
+        if [ $user -eq 0 ]; then 
+            echo "installing the package"
+            yum install mysql -y
+        else
+            echo "making the root user"
+            sudo su - 
+            yum install mysql -y
+        fi 
     fi
-done
-echo "$user this is my user name "
 
 
 
