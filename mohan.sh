@@ -11,7 +11,6 @@ do
     if [ $? -eq 0 ]; then 
         echo "$y package installed"
     else
-        echo "$r package is not installed"
         if [ $user -eq 0 ]; then 
             echo "installing the package"
             yum install mysql -y
