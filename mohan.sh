@@ -2,23 +2,11 @@
 
 
 
-userid=$(date +%F)
-sname=$0
-logfile=/tmp/sname-$userid.log
-validate(){
-    if [ $userid -ne 0 ]; then
-        echo "please make sure you are root user"
-        exit 1
-    else
-        echo "your request will install soon"
-    fi
-}
+echo "\e[31m this is the color"
+echo "\e[32m this is the color"
+echo "\e[33m this is the monan"
 
-yum remove mysql -y &>>$logfile
 
-validate $? "my sql is installed and preparing for postfix"
-
-yum remove postfix -y &>>$logfile
 
 
 
