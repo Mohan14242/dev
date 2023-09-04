@@ -21,3 +21,4 @@ do
             yum install mysql -y
         fi 
     fi
+done
