@@ -9,7 +9,7 @@ do
         sudo yum install mysql -y
         echo "$i has been installed"
     else
-        echo "package already installed"
+        echo "package already installed $i"
     fi
 done
 
