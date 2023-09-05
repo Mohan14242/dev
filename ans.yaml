@@ -1,6 +1,6 @@
-
-- name: play the nod
+---
+- name: Play the node
   hosts: web
   tasks:
-  - name: pinging the server
-    ansible.buitlin.ping:
+    - name: Pinging the server
+      ansible.builtin.ping:
