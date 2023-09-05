@@ -17,7 +17,7 @@ do
         else
             echo "making the root user"
             sudo su - 
-            yum install mysql -y
+            yum install $i -y
         fi 
     fi
 done
