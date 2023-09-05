@@ -1,21 +1,6 @@
----
-- name: Example playbook with built-in variables
-  hosts: localhost  # Replace with your target host or group
-  gather_facts: yes  # Gather facts about the target host
+
+- name: play the nod
+  hosts: web
   tasks:
-    - name: Display built-in variables
-      debug:
-        var: item
-      loop:
-        - ansible_hostname
-        - ansible_distribution
-        - ansible_distribution_version
-        - ansible_architecture
-        - ansible_os_family
-        - ansible_fqdn
-        - ansible_default_ipv4.address
-        - ansible_ssh_port
-        - ansible_python_version
-        - ansible_date_time.date
-        - ansible_date_time.time
-        - ansible_date_time.epoch
+  - name: pinging the server
+    ansible.buitlin.ping:
