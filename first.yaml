@@ -1,9 +1,8 @@
----
-- name: for testing purpose
+- name: variables from the files 
   hosts: localhost
   vars_files:
-    - var.yaml  # Include variables from this file
+  - vars.yaml
   tasks:
-    - name: printing the variables
-      ansible.builtin.debug:
-        msg: "my name is {{ name }} and my age is {{ age }}"
+  - name: for printing the variables
+    ansible.builtin.debug:
+      msg: 'this is the mohan'
