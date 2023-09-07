@@ -1,9 +1,9 @@
 - name: for testing purpose
   hosts: localhost
   vars_files:
-    -var.yaml
+  - var.yaml
   tasks:
   - name: printing the varibles
     ansible.builtin.debug:
       msg: "my name is {{name}} and my age is {{age}}"
-  - name: 
+  
