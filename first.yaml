@@ -11,6 +11,9 @@
     private: false
   tasks:
   - name: getting the details only when it is tru
+    vars:
+      name: nothign 
+      course: the course  i like
     ansible.builtin.debug:
       msg: "hi thisis {{name}} and the course i am doing is {{course}}"
  
