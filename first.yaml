@@ -11,5 +11,6 @@
     private: false
   tasks:
   - name: for printing the variables
+  
     ansible.builtin.debug:
       msg: 'this is the mohan{{username}} and  {{password}}'
