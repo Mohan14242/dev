@@ -1,16 +1,12 @@
-- name: variables from the files 
+- name: printing the varibles
   hosts: localhost
-  vars_files:
-  - var.yaml
-  vars_prompt:
-  - name: username
-    prompt: please enter your user name
-    private: false
-  - name: password
-    prompt: please enter your password
-    private: false
+  vars:
+    name: mohan
+    age: 26
+    course: devops
+    experience: true
   tasks:
-  - name: for printing the variables
-  
+  - name: getting the details only when it is tru
     ansible.builtin.debug:
-      msg: 'this is the mohan{{username}} and  {{password}}'
+      msg: "hi thisis {{name}} and the course i am doing is {{course}}"
+    when: experience = "true"
