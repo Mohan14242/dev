@@ -1,26 +1,13 @@
-- name: this is the for printing
+- name: arithimatic operations
   hosts: localhost
-  vars:
-  - age: 30
-  - name: mohan
-  - isdevops: true
-  - skills: 
-    - devops
-    - IA
-    - cloud 
-  - expoerinence:
-    aws: 3
-    devops: 4
+  vars_prompt:
+  - name: a
+    prompt: please enter the value a
+    private: false
+  - name : b
+    prompt: please enter the values b
+    private: false
   tasks:
-  - name: pritngintthe alll variables
+  - name : printing the variables from the promtps
     ansible.builtin.debug:
-      msg: "{{age}}"
-  - name: printing the name 
-    ansible.builtin.debug:  
-      msg: "{{name}}"
-  - name: is he belong to devop
-    ansible.builtin.debug:
-      msg: "{{isdevops}}"
-  - name: pritn ggint skills
-    ansible.builtin.debug:
-      msg: "{{skills}}"
+      msg: "{{a+b}}"
