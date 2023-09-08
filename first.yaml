@@ -10,4 +10,4 @@
   tasks:
   - name : printing the variables from the promtps
     ansible.builtin.debug:
-      msg: "{{a+b}}"
+      msg: {{a+b}}
