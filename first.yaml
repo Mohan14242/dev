@@ -5,6 +5,10 @@
     age: 26
     course: devops
     experience: true
+  vars_prompt:
+  - name: giving the variables in the commmanling 
+    prompt: what is your name 
+    private: false
   tasks:
   - name: getting the details only when it is tru
     ansible.builtin.debug:
