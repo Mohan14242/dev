@@ -1,6 +1,26 @@
-- name: printing the variables
+- name: this is the for printing
   hosts: localhost
+  vars:
+  - age: 30
+  - name: mohan
+  - isdevops: true
+  - skills: 
+    - devops
+    - IA
+    - cloud 
+  - expoerinence:
+    aws: 3
+    devops: 4
   tasks:
-  - name: printing the variable  from the comand line
+  - name: pritngintthe alll variables
     ansible.builtin.debug:
-      msg: "this is the variable from {{course}}"
+      msg: "{{age}}"
+  - name: printing the name 
+    ansible.builtin.debug:  
+      msg: "{{name}}"
+  - name: is he belong to devop
+    ansible.builtin.debug:
+      msg: "{{isdevops}}"
+  - name: pritn ggint skills
+    ansible.builtin.debug:
+      msg: "{{skills}}"
