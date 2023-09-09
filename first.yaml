@@ -1,13 +1,2 @@
-- name: arithimatic operations
+- name: printing 
   hosts: localhost
-  vars_prompt:
-  - name: a
-    prompt: please enter the value a
-    private: false
-  - name : b
-    prompt: please enter the values b
-    private: false
-  tasks:
-  - name : printing the variables from the promtps
-    ansible.builtin.debug:
-      msg: {{a+b}}
